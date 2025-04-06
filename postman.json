@@ -1,0 +1,78 @@
+{
+    "info": {
+        "name": "Spring Native Demo API",
+        "description": "API collection for testing the Spring Native Demo application",
+        "version": "1.0.0"
+    },
+    "item": [
+        {
+            "name": "Create User",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "url": "http://localhost:8080/api/users",
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n    \"username\": \"testuser\",\n    \"email\": \"test@example.com\",\n    \"password\": \"password123\"\n}"
+                }
+            }
+        },
+        {
+            "name": "Get All Users",
+            "request": {
+                "method": "GET",
+                "url": "http://localhost:8080/api/users"
+            }
+        },
+        {
+            "name": "Get User by ID",
+            "request": {
+                "method": "GET",
+                "url": "http://localhost:8080/api/users/1"
+            }
+        },
+        {
+            "name": "Get User by Username",
+            "request": {
+                "method": "GET", 
+                "url": "http://localhost:8080/api/users/username/testuser"
+            }
+        },
+        {
+            "name": "Get User by Email",
+            "request": {
+                "method": "GET",
+                "url": "http://localhost:8080/api/users/email/test@example.com"
+            }
+        },
+        {
+            "name": "Update User",
+            "request": {
+                "method": "PUT",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "url": "http://localhost:8080/api/users/1",
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n    \"username\": \"updateduser\",\n    \"email\": \"updated@example.com\",\n    \"password\": \"newpassword123\"\n}"
+                }
+            }
+        },
+        {
+            "name": "Delete User",
+            "request": {
+                "method": "DELETE",
+                "url": "http://localhost:8080/api/users/1"
+            }
+        }
+    ]
+}

@@ -1,0 +1,5 @@
+com\example\springnativedemo\model\User.class
+com\example\springnativedemo\controller\UserController.class
+com\example\springnativedemo\SpringNativeDemoApplication.class
+com\example\springnativedemo\repository\UserRepository.class
+com\example\springnativedemo\service\UserService.class
