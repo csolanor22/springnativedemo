@@ -9,7 +9,7 @@ RUN microdnf -y install wget tar gzip && \
 WORKDIR /app
 COPY pom.xml .
 COPY src ./src
-RUN mvn -Pnative -ntp package
+RUN mvn -X -Pnative -ntp package
 
 FROM ubi9-minimal:latest AS runner
 COPY --from=builder /app/target/spring-native-demo /app
